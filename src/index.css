@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Tonal Palette */
+  --bg-color: #f7f9fb;
+  --surface-low: #f0f4f7;
+  --surface-high: #e3e9ed;
+  --surface-card: #ffffff;
+  
+  --primary: #0058cc;
+  --primary-container: #367bfb;
+  --on-primary: #f9f8ff;
+  
+  --text-main: #2c3437;
+  --text-muted: #596064;
+  --border-ghost: rgba(172, 179, 183, 0.15);
+  
+  --font-heading: 'Manrope', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Global Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-container) 100%);
+  color: var(--on-primary);
+  padding: 12px 32px;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 24px rgba(54, 123, 251, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Added Premium Micro-interactions --- */
+/* Global Button Lift & Press */
+button,
+a[class*="btn"],
+.install-btn,
+.hp-call-btn,
+.hp-wa-btn,
+.btn-card,
+.gal-btn {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+button:hover,
+a[class*="btn"]:hover,
+.install-btn:hover,
+.hp-call-btn:hover,
+.hp-wa-btn:hover,
+.btn-card:hover,
+.gal-btn:hover {
+  transform: translateY(-2px) !important;
+}
+
+button:active,
+a[class*="btn"]:active,
+.install-btn:active,
+.hp-call-btn:active,
+.hp-wa-btn:active,
+.btn-card:active,
+.gal-btn:active {
+  transform: translateY(0) scale(0.97) !important;
+}
+
+/* Scroll Revealer - One Time trigger */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

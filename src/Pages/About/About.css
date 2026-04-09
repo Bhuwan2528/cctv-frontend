@@ -1,0 +1,441 @@
+.about-page {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  width: 100%;
+}
+
+/* 1. Hero / Banner Section */
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://static.vecteezy.com/system/resources/thumbnails/047/595/208/small/close-up-of-hands-repairing-smartphone-with-precision-tools-technology-service-expertise-photo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(5, 10, 15, 0.85) 0%, rgba(20, 30, 40, 0.75) 100%);
+  z-index: 1;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  max-width: 900px;
+  padding: 0 5%;
+}
+
+.about-hero-title {
+  font-size: 3.75rem;
+  line-height: 1.3;
+  font-weight: 800;
+  margin-bottom: 24px;
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+.about-hero-subtitle {
+  font-size: 1.35rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+/* Common Header */
+.section-header-modern {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.section-header-modern h2 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 16px;
+}
+
+.section-header-modern p {
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 2. Intro / Story Section */
+.about-story {
+  padding: 120px 5%;
+  background-color: var(--bg-color);
+}
+
+.story-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.story-content {
+  flex: 1;
+}
+
+.story-content h2 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.story-content p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.story-highlights {
+  display: flex;
+  gap: 32px;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-ghost);
+}
+
+.highlight-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.highlight-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.highlight-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.story-image {
+  flex: 1;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+  aspect-ratio: 4/5;
+  max-height: 600px;
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 3. Mission & Vision Section */
+.mission-vision {
+  padding: 100px 5%;
+  background-color: var(--surface-low);
+}
+
+.mv-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.mv-card {
+  background-color: var(--surface-card);
+  padding: 60px 50px;
+  border-radius: 32px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+  transition: transform 0.4s ease;
+  border: 1px solid var(--border-ghost);
+}
+
+.mv-card:hover {
+  transform: translateY(-8px);
+}
+
+.mv-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: rgba(0, 88, 204, 0.05);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.mv-card h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 20px;
+}
+
+.mv-card p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* 4. Core Values Section */
+.core-values {
+  padding: 120px 5%;
+  background-color: var(--bg-color);
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.value-card {
+  text-align: center;
+  padding: 40px 30px;
+  background-color: var(--surface-card);
+  border-radius: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-ghost);
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.value-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 24px;
+  background: linear-gradient(135deg, var(--on-primary) 0%, #edf1f4 100%);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-card h4 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.value-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* 5. Team / Expertise Section */
+.expertise-section {
+  padding: 100px 5%;
+  background-color: var(--surface-low);
+}
+
+.expertise-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.expertise-item {
+  background-color: var(--bg-color);
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.expertise-item h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.expertise-item p {
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* 6. CTA Section */
+.about-cta {
+  background-color: var(--surface-low);
+  padding: 40px 5%;
+}
+
+.about-cta-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+  background-image: url('https://freerangestock.com/sample/141860/team-of-young-managers-discussing-a-project-with-laptop-in-office.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.1);
+}
+
+.about-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(10, 15, 20, 0.8), rgba(13, 62, 126, 0.7));
+  z-index: 1;
+}
+
+.about-cta-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 60px;
+  gap: 40px;
+}
+
+.cta-left {
+  flex: 1;
+  color: #fff;
+}
+
+.cta-left h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.cta-left p {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.cta-right {
+  display: flex;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.ab-btn {
+  padding: 16px 36px;
+  border-radius: 99px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.ab-call-btn {
+  background-color: #fff;
+  color: var(--primary);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.ab-call-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.2);
+}
+
+.ab-wa-btn {
+  background-color: #25D366;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+}
+
+.ab-wa-btn:hover {
+  transform: translateY(-2px);
+  background-color: #128C7E;
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.4);
+}
+
+/* Animations */
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeInSoft 1s ease-out forwards;
+}
+
+@keyframes fadeInSoft {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  .about-hero-title { font-size: 3.25rem; }
+  .story-wrapper { gap: 40px; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 992px) {
+  .story-wrapper { flex-direction: column; }
+  .story-content { text-align: center; }
+  .story-highlights { justify-content: center; }
+  .story-image { width: 100%; max-height: 500px; }
+  .mv-grid { grid-template-columns: 1fr; }
+  .expertise-grid { grid-template-columns: 1fr; }
+  .about-cta-content { flex-direction: column; text-align: center; padding: 60px 40px; }
+  .cta-left p { margin: 0 auto; }
+}
+
+@media (max-width: 768px) {
+  .about-hero-title { font-size: 2.5rem; }
+  .about-hero { height: 60vh; min-height: 450px; }
+  .story-highlights { flex-direction: column; gap: 24px; text-align: center; }
+  .values-grid { grid-template-columns: 1fr; }
+  .cta-right { flex-direction: column; width: 100%; }
+  .ab-btn { width: 100%; justify-content: center; }
+  .about-cta { padding: 60px 5%; }
+  .about-cta-content { padding: 40px 20px; }
+  .cta-left h2 { font-size: 2.2rem; }
+  .mv-card { padding: 40px 30px; }
+}
