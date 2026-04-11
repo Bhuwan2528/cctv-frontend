@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from 'react';
+import Banner from '../../components/Banner/Banner';
+import CTASection from '../../components/CTASection/CTASection';
 import './About.css';
 
 // SVG Icons
@@ -52,15 +54,11 @@ const About = () => {
     <div className="about-page" ref={containerRef}>
       
       {/* 1. Hero / Banner Component */}
-      <section className="about-hero">
-        <div className="about-hero-overlay"></div>
-        <div className="about-hero-content animate-fade-in">
-          <h1 className="about-hero-title">About Bhuwan Suneja CCTV</h1>
-          <p className="about-hero-subtitle">
-            Delivering advanced, battle-tested security solutions with unparalleled precision and unshakeable trust.
-          </p>
-        </div>
-      </section>
+      <Banner 
+        variant="about"
+        title="About Bhuwan Suneja CCTV"
+        subtitle="Delivering advanced, battle-tested security solutions with unparalleled precision and unshakeable trust."
+      />
 
       {/* 2. Intro / Story Section */}
       <section className="about-story">
@@ -149,25 +147,12 @@ const About = () => {
       </section>
 
       {/* 6. CTA / Action Block  */}
-      <section className="about-cta">
-        <div className="about-cta-wrapper animate-on-scroll">
-          <div className="about-cta-overlay"></div>
-          <div className="about-cta-content">
-            <div className="cta-left">
-              <h2>Let’s Secure Your Space</h2>
-              <p>Ready to deploy uncompromising security? Contact us immediately to arrange an on-site architectural strategy and detailed quotation from our directors.</p>
-            </div>
-            <div className="cta-right">
-              <a href="tel:9999999999" className="ab-btn ab-call-btn">
-                <Icons.Phone /> Call Now
-              </a>
-              <a href="https://wa.me/919999999999?text=Hello%20I%20want%20to%20know%20more" target="_blank" rel="noopener noreferrer" className="ab-btn ab-wa-btn">
-                <Icons.WhatsApp /> WhatsApp Message
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        variant="about"
+        title="Let’s Secure Your Space"
+        description="Ready to deploy uncompromising security? Contact us immediately to arrange an on-site architectural strategy and detailed quotation from our directors."
+        waMessage="Hello I want to know more"
+      />
 
     </div>
   );

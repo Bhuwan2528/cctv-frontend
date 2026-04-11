@@ -406,14 +406,32 @@
 @media (max-width: 768px) {
   .contact-hero-title { font-size: 2.5rem; }
   .contact-hero { height: 50vh; min-height: 400px; }
-  .info-cards-grid { grid-template-columns: 1fr; }
+  .info-cards-grid { grid-template-columns: 1fr; gap: 20px; }
   
   .form-left { padding: 40px 20px; }
+  /* Thumb-friendly form fields */
+  .contact-input,
+  .contact-textarea {
+    padding: 16px;
+  }
+  
+  .form-submit-btn {
+    width: 100%;
+    margin-bottom: 20px; /* Safe thumb scrolling */
+    min-height: 48px;
+  }
+  
   .map-badge { bottom: 20px; left: 20px; right: 20px; max-width: none; }
   
-  .cta-right { flex-direction: column; width: 100%; }
-  .ct-btn { width: 100%; justify-content: center; }
+  .cta-right { flex-direction: column; width: 100%; gap: 12px; }
+  .ct-btn { width: 100%; justify-content: center; min-height: 48px; }
   .contact-cta { padding: 40px 5%; }
-  .contact-cta-content { padding: 40px 20px; }
+  .contact-cta-content { padding: 40px 20px; text-align: center; }
   .cta-left h2 { font-size: 2.2rem; }
+}
+
+@media (max-width: 400px) {
+  .contact-hero-title { font-size: 2rem; }
+  .section-header-modern h2 { font-size: 1.8rem; }
+  .cta-left h2 { font-size: 1.8rem; }
 }

@@ -431,11 +431,17 @@
   .about-hero-title { font-size: 2.5rem; }
   .about-hero { height: 60vh; min-height: 450px; }
   .story-highlights { flex-direction: column; gap: 24px; text-align: center; }
-  .values-grid { grid-template-columns: 1fr; }
-  .cta-right { flex-direction: column; width: 100%; }
-  .ab-btn { width: 100%; justify-content: center; }
+  .values-grid { grid-template-columns: 1fr; gap: 20px; }
+  .cta-right { flex-direction: column; width: 100%; gap: 12px; }
+  .ab-btn { width: 100%; justify-content: center; min-height: 48px; margin-bottom: 8px; }
   .about-cta { padding: 60px 5%; }
-  .about-cta-content { padding: 40px 20px; }
+  .about-cta-content { padding: 40px 20px; text-align: center; }
   .cta-left h2 { font-size: 2.2rem; }
   .mv-card { padding: 40px 30px; }
+}
+
+@media (max-width: 400px) {
+  .about-hero-title { font-size: 2rem; }
+  .section-header-modern h2 { font-size: 1.8rem; }
+  .cta-left h2 { font-size: 1.8rem; }
 }

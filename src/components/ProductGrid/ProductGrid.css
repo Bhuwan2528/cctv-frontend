@@ -1,0 +1,193 @@
+/* ===== GRID ===== */
+.hp-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-top: 50px;
+    padding: 0 10px;
+}
+
+/* ===== CARD ===== */
+.hp-product-card {
+    max-width: 380px;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    transition: all 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.hp-product-card:hover {
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== IMAGE SECTION ===== */
+.hp-card-img {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: #f3f4f6;
+}
+
+.hp-card-img img {
+    width: 100% !important;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.5s ease;
+}
+
+.hp-product-card:hover .hm-img {
+    transform: scale(1.1);
+}
+
+/* ===== TAG ===== */
+.hp-pill {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-weight: 500;
+}
+
+/* ===== CONTENT ===== */
+.hp-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* TITLE */
+.hp-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+}
+
+/* DESC */
+.hp-card-desc {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* ===== FEATURES ===== */
+.product-features-list {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.product-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #374151;
+}
+
+.product-feature-item svg {
+    color: #10b981;
+    flex-shrink: 0;
+}
+
+/* ===== BUTTONS ===== */
+.hp-card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+/* COMMON BUTTON */
+.hp-btn {
+    flex: 1;
+    padding: 11px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+/* CALL */
+.hp-call-btn {
+    background: #111827;
+    color: #fff;
+}
+
+.hp-call-btn:hover {
+    background: #000;
+}
+
+/* WHATSAPP */
+.hp-wa-btn {
+    background: #25d366;
+    color: #fff;
+}
+
+.hp-wa-btn:hover {
+    background: #1ebe5d;
+}
+
+/* ===== FALLBACK ICON ===== */
+.product-icon-fallback {
+    display: block;
+    margin: auto;
+    margin-top: 70px;
+    opacity: 0.4;
+}
+
+/* ===== TEXT STATES ===== */
+.pg-center-text {
+    text-align: center;
+    padding: 40px;
+    color: #6b7280;
+}
+
+.pg-error-text {
+    text-align: center;
+    padding: 40px;
+    color: red;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .hp-products-grid {
+        gap: 20px;
+    }
+
+    .hp-card-img {
+        height: 180px;
+    }
+
+    .hp-card-title {
+        font-size: 16px;
+    }
+
+    .hp-card-desc {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hp-products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hp-card-actions {
+        flex-direction: column;
+    }
+}

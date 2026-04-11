@@ -371,6 +371,7 @@
   }
   .products-grid-new {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   .bottom-cta-content {
     flex-direction: column;
@@ -383,12 +384,28 @@
   .bottom-cta-actions {
     flex-direction: column;
     width: 100%;
+    gap: 12px;
   }
   .btn-cta-large {
     width: 100%;
     justify-content: center;
+    margin-bottom: 4px;
   }
   .product-card-actions {
     flex-direction: column;
+    gap: 10px;
+  }
+  .btn-card {
+    width: 100%;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 400px) {
+  .products-banner-title {
+    font-size: 2rem;
+  }
+  .section-header-compact h2 {
+    font-size: 1.8rem;
   }
 }

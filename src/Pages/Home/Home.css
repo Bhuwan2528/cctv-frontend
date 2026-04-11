@@ -200,79 +200,6 @@
   line-height: 1.6;
 }
 
-/* GRID */
-.hp-products-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-/* CARD */
-.hp-product-card {
-  background: #ffffff;
-  border-radius: 18px;
-  overflow: hidden;
-  transition: all 0.35s ease;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.04);
-  display: flex;
-  flex-direction: column;
-}
-
-/* HOVER */
-.hp-product-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
-}
-
-/* IMAGE */
-.hp-card-img {
-  height: 220px;
-  overflow: hidden;
-  position: relative;
-}
-
-.hp-card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.4s;
-}
-
-.hp-product-card:hover img {
-  transform: scale(1.05);
-}
-
-/* TAG */
-.hp-pill {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: #eff6ff;
-  color: #2563eb;
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-size: 0.7rem;
-  font-weight: 600;
-}
-
-/* CONTENT */
-.hp-card-content {
-  padding: 24px;
-}
-
-.hp-card-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 10px;
-}
-
-.hp-card-desc {
-  font-size: 0.95rem;
-  color: #64748b;
-  margin-bottom: 22px;
-}
-
 /* BUTTONS */
 .hp-card-actions {
   display: flex;
@@ -572,159 +499,84 @@
   font-size: 0.95rem;
 }
 
-/* 6. CTA Section Blob Design */
-.hp-cta {
-  position: relative;
-  padding: 100px 4%;
-  background: radial-gradient(circle at 20% 20%, #0f172a, #020617);
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/* =========================
+   MOBILE TESTIMONIAL FIX
+========================= */
 
-/* 🔮 BLOBS (more depth) */
-.blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.6;
-  z-index: 1;
-  animation: blob-float 12s infinite alternate ease-in-out;
-}
+@media (max-width: 768px) {
 
-.blob-1 {
-  background: #3b82f6;
-  width: 700px;
-  height: 700px;
-  top: -250px;
-  left: -250px;
-}
-
-.blob-2 {
-  background: #0ea5e9;
-  width: 600px;
-  height: 600px;
-  bottom: -200px;
-  right: -150px;
-  animation-delay: -4s;
-}
-
-.blob-3 {
-  background: #6366f1;
-  width: 500px;
-  height: 500px;
-  top: 30%;
-  left: 40%;
-  animation-delay: -8s;
-}
-
-@keyframes blob-float {
-  0% {
-    transform: scale(1) translate(0, 0);
+  .hp-testimonials {
+    padding: 80px 0;
   }
-  100% {
-    transform: scale(1.2) translate(60px, 40px);
+
+  .marquee-container {
+    gap: 20px;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  .marquee-row {
+    gap: 16px;
+  }
+
+  .test-card {
+    min-width: 300px; /* 🔥 main fix */
+    padding: 16px;
+    border-radius: 18px;
+    margin-right: 16px;
+  }
+
+  .test-user img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .test-info h4 {
+    font-size: 0.95rem;
+  }
+
+  .test-stars {
+    font-size: 0.85rem;
+  }
+
+  .test-body {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  /* animation slow for mobile */
+  .scroll-left {
+    animation: marquee-left 60s linear infinite;
+  }
+
+  .scroll-right {
+    animation: marquee-right 60s linear infinite;
   }
 }
 
-/* 💎 GLASS CARD */
-.hp-cta-content {
-  position: relative;
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(40px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 50px 40px;
-  border-radius: 32px;
-  text-align: center;
-  max-width: 1000px;
-  box-shadow:
-    0 40px 120px rgba(0, 0, 0, 0.6),
-    inset 0 0 60px rgba(255, 255, 255, 0.05);
+
+/* =========================
+   SMALL MOBILE (IMPORTANT)
+========================= */
+
+@media (max-width: 480px) {
+
+  .test-card {
+    min-width: 220px;
+    padding: 14px;
+  }
+
+  .test-body {
+    font-size: 0.8rem;
+  }
+
 }
 
-/* 🏷️ Badge */
-.cta-badge {
-  display: inline-block;
-  padding: 8px 18px;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  background: rgba(59, 130, 246, 0.15);
-  color: #93c5fd;
-  margin-bottom: 25px;
-  letter-spacing: 0.5px;
-}
 
-/* 🧠 Heading */
-.hp-cta-content h2 {
-  font-size: 45px;
-  font-weight: 800;
-  color: #f1f5f9;
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
 
-.hp-cta-content h2 span {
-  background: linear-gradient(90deg, #38bdf8, #6366f1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
-/* 📄 Text */
-.hp-cta-content p {
-  font-size: 1rem;
-  color: #cbd5f5;
-  margin-bottom: 35px;
-  line-height: 1.7;
-}
 
-/* 🔘 Buttons */
-.hp-cta-actions {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 
-.cta-btn-xl {
-  padding: 18px 40px;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  transition: all 0.35s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-/* 🔥 Primary button */
-.cta-xl-primary {
-  background: linear-gradient(135deg, #3b82f6, #6366f1);
-  color: #fff;
-  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
-}
-
-.cta-xl-primary:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 25px 60px rgba(99, 102, 241, 0.6);
-}
-
-/* 💚 WhatsApp */
-.cta-xl-wa {
-  background: rgba(37, 211, 102, 0.15);
-  color: #22c55e;
-  border: 1px solid rgba(34, 197, 94, 0.4);
-}
-
-.cta-xl-wa:hover {
-  background: #22c55e;
-  color: white;
-  transform: translateY(-5px);
-}
 
 /* 📱 Responsive */
 @media (max-width: 768px) {
@@ -765,6 +617,11 @@
 }
 
 @media (max-width: 992px) {
+
+  .hero-modern{
+    flex-direction: column;
+    padding: 20px;
+  }
   .hero-stats {
     padding: 30px 40px;
   }
@@ -794,10 +651,74 @@
     padding: 120px 0;
   }
 
-  .hero-title {
+  .hero-heading {
     font-size: 2.8rem;
   }
+  
+  .hero-text {
+    font-size: 1.05rem;
+  }
 
+  .hp-products-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hp-why-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .hero-stats-modern {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    width: 100%;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .install-cta-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .cta-right {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  
+  .install-btn {
+    width: 100%;
+    margin-bottom: 8px; /* Thumb friendly */
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-heading {
+    font-size: 2.2rem;
+  }
+  .hero-stats-modern {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .hero-buttons .btn-main, 
+  .hero-buttons .btn-glass {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 768px) {
   .hero-desc {
     font-size: 1.1rem;
   }
