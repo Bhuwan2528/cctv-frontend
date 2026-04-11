@@ -16,7 +16,7 @@ const Dashboard = () => {
 
     try {
       const res = await axios.get(
-        "http://localhost:3000/api/products"
+        "https://cctv-backend-1fno.onrender.com/api/products"
       );
 
       setTotalProducts(res.data.length);

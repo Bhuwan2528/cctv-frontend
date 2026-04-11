@@ -66,7 +66,7 @@ const AddProducts = () => {
       data.append("image", image);
 
       await axios.post(
-        "http://localhost:3000/api/products/create",
+        "https://cctv-backend-1fno.onrender.com/api/products/create",
         data,
         {
           withCredentials: true,
@@ -216,3 +216,8 @@ const AddProducts = () => {
 };
 
 export default AddProducts;
+
+
+
+
+//heelloo
