@@ -92,7 +92,7 @@
 
 /* CALL BTN */
 .header__call-btn {
-  background: #000;
+  background: linear-gradient(135deg, rgb(17, 84, 172), rgb(10, 33, 97));
   color: #fff;
   padding: 10px 20px;
   border-radius: 99px;
