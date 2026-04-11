@@ -1,5 +1,5 @@
-import React from 'react';
-import { Routes, Route, Outlet } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Routes, Route, Outlet, useLocation } from 'react-router-dom';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -18,7 +18,20 @@ import AddProduct from './Admin/AdminForms/AddProducts';
 import UpdateProduct from './Admin/AdminForms/UpdateProducts';
 import ProductsList from './Admin/ProductsList/ProductsList';
 
-// ✅ PUBLIC LAYOUT (Header + Footer only for user pages)
+
+// ✅ SCROLL TO TOP (inline)
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
+
+// ✅ PUBLIC LAYOUT
 const PublicLayout = () => {
   return (
     <>
@@ -33,29 +46,31 @@ const PublicLayout = () => {
 
 function App() {
   return (
-    <Routes>
+    <>
+      <ScrollToTop /> {/* 🔥 YAHI ADD KARNA THA */}
 
-      {/* PUBLIC ROUTES */}
-      <Route element={<PublicLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/installation" element={<Installation />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/contact" element={<Contact />} />
-      </Route>
+      <Routes>
 
-      {/* ADMIN LOGIN (NO HEADER FOOTER) */}
-      <Route path="/admin" element={<AdminLogin />} />
+        {/* PUBLIC ROUTES */}
+        <Route element={<PublicLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/installation" element={<Installation />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
 
-      {/* ADMIN PANEL (NO HEADER FOOTER) */}
-      <Route path="/admin-panel" element={<AdminPanel />} />
-      <Route path="/admin/add-product" element={<AddProduct />} />
-      <Route path="/update/:id" element={<UpdateProduct />} />
-      <Route path="/products-list" element={<ProductsList />} />
+        {/* ADMIN */}
+        <Route path="/admin" element={<AdminLogin />} />
+        <Route path="/admin-panel" element={<AdminPanel />} />
+        <Route path="/admin/add-product" element={<AddProduct />} />
+        <Route path="/update/:id" element={<UpdateProduct />} />
+        <Route path="/products-list" element={<ProductsList />} />
 
-    </Routes>
+      </Routes>
+    </>
   );
 }
 

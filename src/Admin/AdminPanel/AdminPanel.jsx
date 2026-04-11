@@ -13,14 +13,18 @@ const AdminPanel = () => {
   const navigate = useNavigate();
 
   // 🔐 CHECK AUTH
+const [checkingAuth, setCheckingAuth] = useState(true);
+
 useEffect(() => {
   fetch("https://cctv-backend-1fno.onrender.com/api/auth/check-auth", {
-    credentials: "include", // 🔥 IMPORTANT
+    credentials: "include",
   })
     .then(res => res.json())
     .then(data => {
       setIsAuthorized(data.isAuth);
-    });
+    })
+    .catch(() => setIsAuthorized(false))
+    .finally(() => setCheckingAuth(false));
 }, []);
 
   const renderPage = () => {
