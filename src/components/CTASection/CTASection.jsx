@@ -34,11 +34,11 @@ const CTASection = ({ variant = 'install', title, description, phoneText = "Call
             <p>{description}</p>
           </div>
           <div className="cta-right">
-            <a href="tel:9999999999" className={`${btnPrefix}-btn ${btnPrefix}-call-btn`}>
+            <a href="tel:8708455707" className={`${btnPrefix}-btn ${btnPrefix}-call-btn`}>
               <FiPhone size={20} /> {phoneText}
             </a>
             <a 
-              href={`https://wa.me/919999999999?text=${encodeURIComponent(waMessage)}`} 
+              href={`https://wa.me/918708455707?text=${encodeURIComponent(waMessage)}`} 
               target="_blank" 
               rel="noopener noreferrer" 
               className={`${btnPrefix}-btn ${btnPrefix}-wa-btn`}

@@ -18,7 +18,7 @@ const whyChooseUsData = [
 ];
 
 // Phone params
-const phoneParams = { number: "9999999999", waNumber: "919999999999", waText: "Hello I want to enquire about CCTV." };
+const phoneParams = { number: "8708455707", waNumber: "918708455707", waText: "Hello I want to enquire about CCTV." };
 
 const Home = () => {
   const containerRef = useRef(null);
@@ -131,7 +131,7 @@ const Home = () => {
       {/* 4. Why Choose Us */}
       <section className="sec-padding hp-why">
         <div className="sec-header animate-on-scroll">
-          <h2>Why Choose Bhuwan Suneja</h2>
+          <h2>Why Choose A Square Hub</h2>
           <p>Don't gamble on security. Work with veterans entirely dedicated to building impenetrable private infrastructures.</p>
         </div>
         <div className="hp-why-grid">

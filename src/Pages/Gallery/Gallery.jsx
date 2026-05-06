@@ -103,10 +103,10 @@ const Gallery = () => {
               <p>Achieve unparalleled surveillance and peace of mind. Get in touch with our security engineers today for a tailored installation blueprint.</p>
             </div>
             <div className="cta-right">
-              <a href="tel:9999999999" className="gal-btn gal-call-btn">
+              <a href="tel:8708455707" className="gal-btn gal-call-btn">
                 <Icons.Phone /> Call Now
               </a>
-              <a href="https://wa.me/919999999999?text=Hello%20I%20want%20CCTV%20installation" target="_blank" rel="noopener noreferrer" className="gal-btn gal-wa-btn">
+              <a href="https://wa.me/918708455707?text=Hello%20I%20want%20CCTV%20installation" target="_blank" rel="noopener noreferrer" className="gal-btn gal-wa-btn">
                 <Icons.WhatsApp /> WhatsApp Us
               </a>
             </div>

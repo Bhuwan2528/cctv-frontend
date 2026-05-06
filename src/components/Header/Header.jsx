@@ -25,10 +25,17 @@ const Header = () => {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header__container">
 
-        <div className="header__logo">
-          <span className="logo-box">BS</span>
-          <span className="logo-text">Bhuwan Suneja</span>
+      <div className="header__logo">
+        <div className="logo-box">
+          <span className="logo-main">A</span>
+          <span className="logo-power">2</span>
         </div>
+
+        <div className="logo-text-wrap">
+          <span className="logo-text">A Square Hub</span>
+          <span className="logo-tagline">Advanced Security Solution</span>
+        </div>
+      </div>
 
         <div className="header__desktop-right">
           <nav className="header__nav">
@@ -41,7 +48,7 @@ const Header = () => {
             <NavLink to="/contact" className="nav-link">Contact</NavLink>
           </nav>
           
-          <a href="tel:9999999999" className="header__call-btn">
+          <a href="tel:8708455707" className="header__call-btn">
             Call Now
           </a>
         </div>

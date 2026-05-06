@@ -39,7 +39,7 @@ const Contact = () => {
     const text = `Hello! I would like to make an inquiry.%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Requirements:* ${formData.message}`;
     
     // Target base number (example)
-    const waNumber = '919999999999';
+    const waNumber = '918708455707';
     const waURL = `https://wa.me/${waNumber}?text=${text}`;
     
     // Redirect
@@ -199,10 +199,10 @@ const Contact = () => {
               <p>Get a completely free, zero-obligation floorpan architecture assessment directly from our top engineers today.</p>
             </div>
             <div className="cta-right">
-              <a href="tel:9999999999" className="ct-btn ct-call-btn">
+              <a href="tel:8708455707" className="ct-btn ct-call-btn">
                 <Icons.Phone /> Call Now
               </a>
-              <a href="https://wa.me/919999999999?text=Hello%20I%20want%20CCTV%20consultation" target="_blank" rel="noopener noreferrer" className="ct-btn ct-wa-btn">
+              <a href="https://wa.me/918708455707?text=Hello%20I%20want%20CCTV%20consultation" target="_blank" rel="noopener noreferrer" className="ct-btn ct-wa-btn">
                 <Icons.WhatsApp /> WhatsApp Us
               </a>
             </div>

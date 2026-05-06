@@ -40,21 +40,82 @@
 
 
 /* LOGO */
+/* LOGO */
 .header__logo {
   display: flex;
-  gap: 10px;
   align-items: center;
+  gap: 14px;
+  cursor: pointer;
 }
 
+/* Main Logo Box */
 .logo-box {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #4f46e5, #6366f1);
-  color: #fff;
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  
   display: flex;
   justify-content: center;
   align-items: center;
+
+  box-shadow:
+    0 10px 25px rgba(79, 70, 229, 0.35),
+    inset 0 1px 1px rgba(255,255,255,0.2);
+
+  transition: 0.3s ease;
+}
+
+.logo-box:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* A */
+.logo-main {
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+/* Superscript 2 */
+.logo-power {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+  font-size: 12px;
+  font-weight: 700;
+  color: #e0e7ff;
+
+  background: rgba(255,255,255,0.15);
+  padding: 1px 4px;
+  border-radius: 6px;
+
+  backdrop-filter: blur(4px);
+}
+
+/* Text */
+.logo-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.5px;
+}
+
+.logo-tagline {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 2px;
+  letter-spacing: 0.4px;
 }
 
 /* HEADER DESKTOP RIGHT (Nav + Btn) */

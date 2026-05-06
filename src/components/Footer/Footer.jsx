@@ -7,10 +7,17 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__container">
         <div className="footer__brand">
-          <div className="footer__logo">
-            <span className="logo-box">BS</span>
-            <span className="logo-text">Bhuwan Suneja</span>
-          </div>
+      <div className="header__logo">
+        <div className="logo-box">
+          <span className="logo-main">A</span>
+          <span className="logo-power">2</span>
+        </div>
+
+        <div className="logo-text-wrap">
+          <span className="logo-text">A Square Hub</span>
+          <span className="logo-tagline">Advanced Security Solution</span>
+        </div>
+      </div> <br />
           <p className="footer__desc">
             Setting the gold standard in modern surveillance and security infrastructure. Precision, safety, and reliability in every frame.
           </p>
@@ -43,7 +50,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer__bottom">
-        <p>&copy; {new Date().getFullYear()} Bhuwan Suneja CCTV. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} A Square Hub CCTV. All rights reserved.</p>
       </div>
     </footer>
   );

@@ -4,8 +4,8 @@ import { FiPhone, FiCamera, FiCheckCircle } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import "./ProductGrid.css";
 
-const phoneNumber = "9999999999";
-const waNumber = "919999999999";
+const phoneNumber = "8708455707";
+const waNumber = "918708455707";
 const waText = "Hello I want to enquire";
 
 const ProductGrid = ({ limit, variant = "compact" }) => {

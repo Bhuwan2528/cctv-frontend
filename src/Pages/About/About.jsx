@@ -56,7 +56,7 @@ const About = () => {
       {/* 1. Hero / Banner Component */}
       <Banner 
         variant="about"
-        title="About Bhuwan Suneja CCTV"
+        title="About A Square Hub CCTV"
         subtitle="Delivering advanced, battle-tested security solutions with unparalleled precision and unshakeable trust."
       />
 
@@ -66,7 +66,7 @@ const About = () => {
           <div className="story-content">
             <h2>Securing What Matters Most to You.</h2>
             <p>
-              Bhuwan Suneja CCTV was founded on a singular premise: to entirely bridge the gap between complex security matrices and accessible user safety. Over our extensive journey, we have migrated from simple analog setups to architecting massive IP-driven surveillance systems running across enormous corporate facilities.
+              A Square Hub CCTV was founded on a singular premise: to entirely bridge the gap between complex security matrices and accessible user safety. Over our extensive journey, we have migrated from simple analog setups to architecting massive IP-driven surveillance systems running across enormous corporate facilities.
             </p>
             <p>
               We treat your physical safety and data privacy as critical assets. Our team operates cleanly, quickly, and respectfully—ensuring your daily life or workflow is entirely uninterrupted during our installations.
