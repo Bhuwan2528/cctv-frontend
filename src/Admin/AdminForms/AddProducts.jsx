@@ -66,7 +66,7 @@ const AddProducts = () => {
       data.append("image", image);
 
       await axios.post(
-        "https://cctv-backend-1fno.onrender.com/api/products/create",
+        "https://cctv-backend-dhz9.onrender.com/api/products/create",
         data,
         {
           withCredentials: true,

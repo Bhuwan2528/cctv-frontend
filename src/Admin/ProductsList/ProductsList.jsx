@@ -19,7 +19,7 @@ const ProductsList = () => {
     setError("");
 
     try {
-      const res = await axios.get("https://cctv-backend-1fno.onrender.com/api/products");
+      const res = await axios.get("https://cctv-backend-dhz9.onrender.com/api/products");
       setProducts(res.data);
     } catch (err) {
       console.error(err);
@@ -37,7 +37,7 @@ const ProductsList = () => {
   const confirmDelete = async () => {
     try {
       await axios.delete(
-        `https://cctv-backend-1fno.onrender.com/api/products/${deleteId}`,
+        `https://cctv-backend-dhz9.onrender.com/api/products/${deleteId}`,
         { withCredentials: true }
       );
 
@@ -98,7 +98,7 @@ const ProductsList = () => {
                   {/* IMAGE */}
                   <td>
                     <img
-                      src={`https://cctv-backend-1fno.onrender.com/${p.image}`}
+                      src={`https://cctv-backend-dhz9.onrender.com/${p.image}`}
                       alt={p.title}
                       className="table-img"
                     />

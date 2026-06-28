@@ -25,7 +25,7 @@ const UpdateProducts = () => {
   const fetchProduct = async () => {
     try {
       const res = await axios.get(
-        `https://cctv-backend-1fno.onrender.com/api/products`
+        `https://cctv-backend-dhz9.onrender.com/api/products`
       );
 
       const product = res.data.find((p) => p._id === id);
@@ -41,7 +41,7 @@ const UpdateProducts = () => {
       });
 
       // 🔥 old image preview
-      setPreview(`https://cctv-backend-1fno.onrender.com/${product.image}`);
+      setPreview(`https://cctv-backend-dhz9.onrender.com/${product.image}`);
     } catch (err) {
       setError("Failed to load product");
     }
@@ -92,7 +92,7 @@ const UpdateProducts = () => {
       }
 
       await axios.put(
-        `https://cctv-backend-1fno.onrender.com/api/products/${id}`,
+        `https://cctv-backend-dhz9.onrender.com/api/products/${id}`,
         data,
         { withCredentials: true }
       );

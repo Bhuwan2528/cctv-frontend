@@ -16,7 +16,7 @@ const AdminPanel = () => {
 const [checkingAuth, setCheckingAuth] = useState(true);
 
 useEffect(() => {
-  fetch("https://cctv-backend-1fno.onrender.com/api/auth/check-auth", {
+  fetch("https://cctv-backend-dhz9.onrender.com/api/auth/check-auth", {
     credentials: "include",
   })
     .then(res => res.json())
@@ -88,7 +88,7 @@ useEffect(() => {
         <button
           className="logout-btn"
           onClick={async () => {
-            await fetch("https://cctv-backend-1fno.onrender.com/api/auth/logout", {
+            await fetch("https://cctv-backend-dhz9.onrender.com/api/auth/logout", {
               method: "POST",
               credentials: "include",
             });

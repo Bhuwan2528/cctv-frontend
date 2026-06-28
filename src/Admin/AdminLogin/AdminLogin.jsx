@@ -19,7 +19,7 @@ const AdminLogin = () => {
 
     try {
       const res = await axios.post(
-        "https://cctv-backend-1fno.onrender.com/api/auth/login",
+        "https://cctv-backend-dhz9.onrender.com/api/auth/login",
         {
           username: email, // 🔥 yaha mapping kar diya
           password: password

@@ -17,7 +17,7 @@ const ProductGrid = ({ limit, variant = "compact" }) => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("https://cctv-backend-1fno.onrender.com/api/products");
+        const res = await axios.get("https://cctv-backend-dhz9.onrender.com/api/products");
         setProducts(res.data || []);
       } catch (err) {
         console.log("ERROR:", err);
@@ -47,7 +47,7 @@ const ProductGrid = ({ limit, variant = "compact" }) => {
   // ================= COMMON CARD =================
   const renderCard = (prod, idx, detailed = false) => {
     const image = prod?.image
-      ? `https://cctv-backend-1fno.onrender.com/${prod.image}`
+      ? `https://cctv-backend-dhz9.onrender.com/${prod.image}`
       : null;
 
     return (
